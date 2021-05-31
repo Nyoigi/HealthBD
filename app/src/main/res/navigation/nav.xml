@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav"
+    app:startDestination="@id/how">
+    <fragment
+        android:id="@+id/how"
+        android:name="com.example.healthh.HowFragment"
+        android:label="fragment_how"
+        tools:layout="@layout/fragment_how" >
+        <action
+            android:id="@+id/action_howFragment_to_askHowFragment"
+            app:destination="@id/askHowFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/askHowFragment"
+        android:name="com.example.healthh.AskHowFragment"
+        android:label="fragment_ask_how"
+        tools:layout="@layout/fragment_ask_how" >
+        <action
+            android:id="@+id/action_askHowFragment_to_howFragment"
+            app:destination="@id/how" />
+    </fragment>
+    <fragment
+        android:id="@+id/pressure"
+        android:name="com.example.healthh.PressureFragment"
+        android:label="fragment_pressure"
+        tools:layout="@layout/fragment_pressure" >
+        <action
+            android:id="@+id/action_pressure_to_addPressureFragment"
+            app:destination="@id/addPressureFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addPressureFragment"
+        android:name="com.example.healthh.AddPressureFragment"
+        android:label="fragment_add_pressure"
+        tools:layout="@layout/fragment_add_pressure" >
+        <action
+            android:id="@+id/action_addPressureFragment_to_pressure"
+            app:destination="@id/pressure" />
+    </fragment>
+</navigation>
